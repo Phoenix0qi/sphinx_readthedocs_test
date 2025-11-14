@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人博客搭建 &mdash; sphinx_readthedocs_test v0.0.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7cf98a4c"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/my_custom.js?v=b4df25ed"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="spninx_guitar documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/Husky.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">个人博客搭建</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">基本流程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">博客要素 方法</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sphinx_readthedocs_test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">个人博客搭建</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/md/个人博客.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>个人博客搭建<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>参考材料</p>
+<ul>
+<li><p><a class="reference external" href="https://www.runningcheese.com/free-website">cheese-free-website</a></p></li>
+<li><p><a class="reference external" href="https://www.runningcheese.com/v02">cheese-搭建细节</a></p></li>
+<li><p><a class="reference external" href="https://blog.yuhan.tech/p/my-hugo-blog-v2/">yuhan-参考搭建流程</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="id2">
+<h2>基本流程<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>网站三大件</p>
+<ul>
+<li><p>域名（用于访问网页）：购买</p></li>
+<li><p>服务器（用于托管静态网站）：　Github可以免费托管静态网站，当作服务器用；Github pages、Vercel、Readthedocs 托管静态网页</p></li>
+<li><p>网站程序（网站内容）：Hugo……，</p></li>
+<li><p><img alt="" src="https://raw.githubusercontent.com/Phoenix0qi/tuchaung/main/img_250605/20251114002503114.png" /></p></li>
+</ul>
+</li>
+<li><p>网站分类</p>
+<ul>
+<li><p>静态网站</p>
+<ul>
+<li><p>指存放在服务器文件系统中实实在在的HTML文件。访问URL时，浏览器下载HTML，渲染后呈现在窗口中</p></li>
+<li><p>JavaScript 发展出了拥有后端服务器功能的 <strong>Node.js</strong>。</p>
+<ul>
+<li><p>相比传统的后端语言，Node.js 拥有超强的性能和响应速度，能够轻松处理大量请求和高并发。</p></li>
+</ul>
+</li>
+<li><p>静态网站生成器 <strong>SSG (Static Site Generation)</strong></p>
+<ul>
+<li><p>静态场景，比如官网、博客、文档等，不需要频繁更新，造成浪费</p></li>
+<li><p>SSG预先生成静态HTML网页，托管到服务器即可显示</p></li>
+<li><p>SSG工具：</p>
+<ul>
+<li><p><a class="reference external" href="https://techwritertoolkit.wordpress.com/2023/06/06/a-feature-breakdown-comparison-jekyll-docusaurus-sphinx-and-hugo/">静态网站生成比较</a></p></li>
+<li><p>博客：Hexo、<strong>Hugo</strong>、Jekyll、NotionNext、<strong>Sphinx</strong></p>
+<ul>
+<li><p>Hugo: 有现成的主题，直接用</p></li>
+</ul>
+</li>
+<li><p>文档程序：VuePress、VitePress、Docusauru、Docsify 、<a class="reference external" href="https://docs.astro.build/en/getting-started/">Astro</a>、<strong>GitBook</strong>、MkDocs、Gridsome、Pelican</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>托管静态网页</p>
+<ul>
+<li><p>方案</p>
+<ul>
+<li><p>参考：<a class="reference external" href="https://www.joyyan.com/Forums/Detail/190">托管静态网站</a></p></li>
+<li><p><strong>Github pages、Vercel、Readthedocs</strong></p></li>
+<li><p>Render</p></li>
+<li><p>Cloudflare Pages：高级、更快、与 Git 仓库的自动整合、全球 CDN 支持、无限制流量（在免费方案内）等</p></li>
+</ul>
+</li>
+<li><p>如何选择</p>
+<ul>
+<li><p>目标用途：如果只是展示型页面或小型博客，Tiiny Host 简单便捷；要持续部署更新、使用 Git 的话，Render／Netlify／Vercel 更适合。</p></li>
+<li><p>流量与带宽预估：如果预计访问量大，带宽或存储大，则选择带限额较高的平台（如 Kinsta）或将来考虑付费升级。</p></li>
+<li><p>技术栈需求：如果使用前端框架或需要自动构建流程，则优先选择支持构建、自动更新的平台。</p></li>
+<li><p>自定义域名与 SSL：确认免费方案是否支持自定义域名 + HTTPS，这对品牌与 SEO 很重要。</p></li>
+<li><p>后续扩展能力：开始免费是没问题，但如果后期可能加入动态功能或大流量访问，提前了解升级路径也很重要。</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>动态网站：</p>
+<ul>
+<li><p>根据当前时间环境参数、数据库，动态生成HTML</p></li>
+<li><p>不直接写 HTML（直接翻译成网页内容的代码），而是前端后端结合</p></li>
+<li><p>前端：JavaScript</p></li>
+<li><p>后端：PHP、Java、Python，通过数据库动态展示网页；发展出了Windows Server，还有 Linux 下 LNMP、LAMP、LNMT 的服务器生态。</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>个人博客方案</p>
+<ul>
+<li><p>方案：</p>
+<ul>
+<li><p>文档编辑：markdown，reStructuredText for Sphinx, Github 存储同步；编辑内容</p></li>
+<li><p>静态网站生成工具: <strong><a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a></strong>; <strong>Hugo</strong>; 编辑主题</p></li>
+<li><p>搭载平台：Github pages; CloudFlare Pages; Readthedocs; gitbook</p></li>
+</ul>
+</li>
+<li><p>方案 教程</p>
+<ul>
+<li><p>Hugo + Vercel</p></li>
+<li><p>Github pages：用户名.github.io；</p></li>
+<li><p><a class="reference external" href="https://github.com/tw93/weekly">Astro + github pages</a></p></li>
+<li><p>🎯<a class="reference external" href="https://juejin.cn/post/7217104536930566204?searchId=2025111401053997897D144CC14EAB9CDC">Github + Sphinx + Readthedocs</a></p></li>
+<li><p>🎯<a class="reference external" href="https://blog.yuhan.tech/p/my-hugo-blog-v2/">Github + Hugo/Sphinx + CloudFlare Pages/Github pages</a></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/zeon-studio/hugoplate">Hugoplate</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id3">
+<h2>博客要素 方法<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul>
+<li><p>要素</p>
+<ul>
+<li><p>导航页 + 知识库分类 （博客、document、notebook……）</p>
+<ul class="simple">
+<li><p>分开主题渲染？ 主页 + 子博客，分级展示？</p></li>
+<li><p>嵌套主题</p></li>
+</ul>
+</li>
+<li><p class="rubric" id="id4">知识库</p>
+</li>
+<li><p>评论、搜索 等其他功能</p></li>
+<li><p>页面渲染 自定义风格 主题</p>
+<ul class="simple">
+<li><p>Hugo Documentation Theme</p>
+<ul>
+<li><p><a class="reference external" href="https://gethugothemes.com/hugo-documentation-themes">9 Best Hugo Documentation Themes For 2025 (Most Popular)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/alex-shpak/hugo-book">Hugo book</a></p></li>
+<li><p>🎯<a class="reference external" href="https://getdoks.org/">doks</a></p></li>
+<li><p><a class="reference external" href="https://www.docsy.dev/docs/">Docsy</a></p></li>
+<li><p>🎯<a class="reference external" href="https://imfing.github.io/hextra/docs/">Hextra</a></p></li>
+<li><p>🎯<a class="reference external" href="https://docdock.netlify.app/">docdock</a></p></li>
+<li><p><a class="reference external" href="https://hugoblox.com/templates/">Hugo Blox</a></p></li>
+<li><p><a class="reference external" href="https://docuapi.netlify.app/">docuapi</a></p></li>
+</ul>
+</li>
+<li><p>🎯readthedocs</p></li>
+<li><p>自定义主题 基于Hugo</p></li>
+</ul>
+</li>
+<li><p>性能要求</p>
+<ul class="simple">
+<li><p>快：CDN、CloudFlare Pages</p></li>
+<li><p>自动更新：Github Actions； 构建；</p></li>
+<li><p>版本控制</p></li>
+<li><p>安全性、公开？</p></li>
+<li><p>……</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>导航页</p>
+<ul class="simple">
+<li><p>WebStack</p>
+<ul>
+<li><p>案例： <a class="reference external" href="https://github.com/shenweiyan/WebStack-Hugo">WebStack-Hugo</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Hugo + CloudFlare Pages / Github pages</p></li>
+<li><p>Github + Sphinx + Readthedocs</p>
+<ul>
+<li><p>搭建流程</p>
+<ul>
+<li><p>注册Readthedocs</p></li>
+<li><p>git clone 笔记仓库</p></li>
+<li><p>安装Sphinx</p>
+<ul class="simple">
+<li><p>CLI：<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code></p></li>
+</ul>
+</li>
+<li><p>CLI：<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code></p>
+<ul>
+<li><p>目录结构：</p></li>
+<li><blockquote>
+<div><p>BOOK
+├── build  # 生成的文件的输出目录
+├── LICENSE
+├── make.bat  # Windows 命令行中编译用的脚本
+├── Makefile  # 编译脚本，make 命令编译时用
+├── rapid_videocr
+├── README.md
+├── requirements.txt
+├── setup.py
+├── source  # 存放文档源文件
+│   ├── conf.py  # 进行 Sphinx 的配置，如主题配置等
+│   ├── index.rst  # 文档项目起始文件，用于配置文档的显示结构 reStructuredText语法
+│   ├── _static  # 静态文件目录，比如图片等
+│   └── _templates  # 模板目录
+└── tests</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>：生成渲染内容</p>
+<ul>
+<li><blockquote>
+<div><p>├── build
+├── html
+├── index.html 为生成内容</p>
+</div></blockquote>
+</li>
+<li><p>初始效果：<img alt="" src="https://raw.githubusercontent.com/Phoenix0qi/tuchaung/main/img_250605/20251115005020155.png" /></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>定制化内容</p>
+<ul>
+<li><p>source/conf.py中配置</p></li>
+<li><p>主题</p>
+<ul class="simple">
+<li><p>安装第三方主题</p></li>
+<li><p>安装<code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme</span></code>(Read the Docs Sphinx Theme)：<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-rtd-theme</span></code></p></li>
+</ul>
+</li>
+<li><p>安装markdown语法支持插件：<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">myst-parser</span></code></p></li>
+<li><p>安装支持mermaid渲染插件: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinxcontrib.mermaid</span></code></p></li>
+<li><p>安装代码块一键复制按钮插件：<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx_copybutton</span></code></p></li>
+<li><p>编辑conf.py配置文件，设置参数：</p>
+<ul>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span>      <span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;sphinx_readthedocs_test&#39;</span>
+      <span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2025, ZCQ&#39;</span>
+      <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;ZCQ&#39;</span>
+      <span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;v0.0.1&#39;</span>
+
+      <span class="c1"># -- General configuration ---------------------------------------------------</span>
+      <span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration</span>
+
+      <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+          <span class="s1">&#39;myst_parser&#39;</span><span class="p">,</span>
+          <span class="s2">&quot;sphinxcontrib.mermaid&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;sphinx_copybutton&quot;</span><span class="p">,</span>
+      <span class="p">]</span>
+
+      <span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+      <span class="p">}</span>
+
+      <span class="n">myst_enable_extensions</span> <span class="o">=</span> <span class="p">[</span>
+          <span class="s2">&quot;tasklist&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;deflist&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;dollarmath&quot;</span><span class="p">,</span>
+      <span class="p">]</span>
+
+      <span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+      <span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+      <span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;zh_CN&#39;</span>
+
+      <span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+      <span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output</span>
+
+      <span class="c1"># html_theme = &#39;alabaster&#39;</span>
+      <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+      <span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+
+      <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s1">&#39;analytics_anonymize_ip&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+          <span class="s1">&#39;logo_only&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+          <span class="s1">&#39;display_version&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+          <span class="s1">&#39;prev_next_buttons_location&#39;</span><span class="p">:</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;style_external_links&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+          <span class="s1">&#39;collapse_navigation&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+          <span class="s1">&#39;sticky_navigation&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+          <span class="s1">&#39;navigation_depth&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+          <span class="s1">&#39;includehidden&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+          <span class="s1">&#39;titles_only&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+      <span class="p">}</span>
+
+      <span class="n">html_logo</span> <span class="o">=</span> <span class="s2">&quot;./_static/Husky.png&quot;</span>
+      <span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+      <span class="n">html_js_files</span> <span class="o">=</span> <span class="p">[</span>
+          <span class="s1">&#39;my_custom.js&#39;</span><span class="p">,</span>
+      <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>生成新内容<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code>进入build/html/目录下, <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span></code>开启服务器，</p></li>
+<li></li>
+</ul>
+</li>
+<li><p>效果如下：</p>
+<ul class="simple">
+<li><p><img alt="" src="https://raw.githubusercontent.com/Phoenix0qi/tuchaung/main/img_250605/20251115010717618.png" /></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>写内容</p>
+<ul class="simple">
+<li><p>index.rst是整体文档，添加写的md文档目录</p></li>
+<li><p>在source目录下新建文件夹，写其他文档</p></li>
+<li></li>
+<li><p>文本内容语法：reStructuredText or Markdown; rst、md</p></li>
+</ul>
+</li>
+<li><p>Sphinx渲染文档托管到Github</p></li>
+<li></li>
+</ul>
+</li>
+<li><p>知识库</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../index.html" class="btn btn-neutral float-left" title="spninx_guitar documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2025, ZCQ。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
