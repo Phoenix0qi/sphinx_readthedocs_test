@@ -15,7 +15,7 @@ release = 'v0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'myst_parser',
+    'myst-parser',
     "sphinxcontrib.mermaid",
     "sphinx_copybutton",
 ]
