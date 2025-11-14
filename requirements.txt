@@ -1,4 +1,10 @@
+
+# readthedocs 需要用到的主题依赖
 sphinx_rtd_theme
-myst-parser
-sphinxcontrib.mermaid
+ 
+# python项目中要用到的依赖
+pathlib
+sparc_me
+numpy
 sphinx_copybutton
+myst-parser
