@@ -8,3 +8,4 @@ sparc_me
 numpy
 sphinx_copybutton
 myst-parser
+sphinxcontrib.mermaid
