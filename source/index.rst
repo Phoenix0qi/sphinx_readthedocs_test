@@ -12,10 +12,10 @@ documentation for details.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
-   md/个人博客.md
+   md
 
 
 * :ref:`genindex`
