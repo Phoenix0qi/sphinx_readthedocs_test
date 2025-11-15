@@ -50,4 +50,4 @@ jobs:
           git checkout -B docs
           git add .
           git commit -m "Update docs from main $(date)"
-          git push -f origin docs
+          git push -f origin docs 
