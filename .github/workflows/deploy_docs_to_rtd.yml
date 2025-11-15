@@ -39,14 +39,13 @@ jobs:
 
       - name: Setup git config
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-
+          git config --global user.email $USER_EMAIL
+          git config --global user.name $USER_NAME
       - name: Push to docs branch
         run: |
           cd docs_build
           git init
-          git remote add origin https://x-access-token:${{ secrets.DOCS_PAT }}@github.com/Phoenix0qi/sphinx_readthedocs_test.git
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git checkout -B docs
           git add .
           git commit -m "Update docs from main $(date)"
