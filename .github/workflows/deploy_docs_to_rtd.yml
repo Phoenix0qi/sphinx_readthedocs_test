@@ -32,29 +32,29 @@ jobs:
       - name: Summit repo to docs branch.
         run: |
           ls
-          rm -r docs
+          rm -r source
 
           git clone -b ${SUBMMIT_BRANCH} $CLONE_URL ${SUBMMIT_BRANCH}
           cd ${SUBMMIT_BRANCH}
           rm -r ${PACKAGE_NAME} || true
           rm source/README.md || true
 
-          # echo "====================="
-          # echo ${SUBMMIT_BRANCH}
-          # cp -r ../${PACKAGE_NAME} .
+          echo "====================="
+          echo ${SUBMMIT_BRANCH}
+          cp -r ../${PACKAGE_NAME} .
 
-          # echo "Update requirements and add packages needed by sphinx"
-          # echo -e '\nsphinx_rtd_theme\nsphinxcontrib.mermaid\nmyst-parser\nsphinx_copybutton\nget_pypi_latest_version' >> ../requirements.txt
-          # rm requirements.txt
-          # cp ../requirements.txt .
+          echo "Update requirements and add packages needed by sphinx"
+          echo -e '\nsphinx_rtd_theme\nsphinxcontrib.mermaid\nmyst-parser\nsphinx_copybutton\nget_pypi_latest_version' >> ../requirements.txt
+          rm requirements.txt
+          cp ../requirements.txt .
 
-          # echo "replace mermaid to {mermaid}"
-          # sed -i 's/mermaid/{mermaid}/g' ../README.md
+          echo "replace mermaid to {mermaid}"
+          sed -i 's/mermaid/{mermaid}/g' ../README.md
 
-          # cp ../README.md source/
+          cp ../README.md source/
 
-          # git add .
-          # git status
-          # git remote remove origin
-          # git remote add origin ${REPO_HTTPS}
-          # git commit -m 'Actions auto update' && git push -f origin ${SUBMMIT_BRANCH} || echo "No changes to commit"
+          git add .
+          git status
+          git remote remove origin
+          git remote add origin ${REPO_HTTPS}
+          git commit -m 'Actions auto update' && git push -f origin ${SUBMMIT_BRANCH} || echo "No changes to commit"
