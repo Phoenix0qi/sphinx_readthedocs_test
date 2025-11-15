@@ -21,3 +21,5 @@ python:
    install:
    - requirements: requirements.txt
         
+
+language = 'ch_ZN'  # 英文

@@ -1,7 +1,7 @@
 
 # readthedocs 需要用到的主题依赖
 sphinx_rtd_theme
- 
+sphinx
 # python项目中要用到的依赖
 pathlib
 sparc_me
