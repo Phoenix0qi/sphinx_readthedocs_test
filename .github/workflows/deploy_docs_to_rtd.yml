@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v4
@@ -29,32 +29,25 @@ jobs:
           python-version: '3.12.0'
           architecture: 'x64'
 
-      - name: Summit repo to docs branch.
+      - name: Prepare docs directory
         run: |
-          ls
-          rm -r source
+          mkdir -p docs_build
+          # cp -r your_package docs_build/ || true
+          cp -r source docs_build/source || true
+          cp README.md docs_build/ || true
+          cp requirements.txt docs_build/ || true
 
-          git clone -b ${SUBMMIT_BRANCH} $CLONE_URL ${SUBMMIT_BRANCH}
-          cd ${SUBMMIT_BRANCH}
-          rm -r ${PACKAGE_NAME} || true
-          rm source/README.md || true
+      - name: Setup git config
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
-          echo "====================="
-          echo ${SUBMMIT_BRANCH}
-          cp -r ../${PACKAGE_NAME} .
-
-          echo "Update requirements and add packages needed by sphinx"
-          echo -e '\nsphinx_rtd_theme\nsphinxcontrib.mermaid\nmyst-parser\nsphinx_copybutton\nget_pypi_latest_version' >> ../requirements.txt
-          rm requirements.txt
-          cp ../requirements.txt .
-
-          echo "replace mermaid to {mermaid}"
-          sed -i 's/mermaid/{mermaid}/g' ../README.md
-
-          cp ../README.md source/
-
+      - name: Push to docs branch
+        run: |
+          cd docs_build
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git checkout -B docs
           git add .
-          git status
-          git remote remove origin
-          git remote add origin ${REPO_HTTPS}
-          git commit -m 'Actions auto update' && git push -f origin ${SUBMMIT_BRANCH} || echo "No changes to commit"
+          git commit -m "Update docs from main $(date)"
+          git push -f origin docs
