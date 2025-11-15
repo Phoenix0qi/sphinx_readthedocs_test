@@ -15,8 +15,12 @@ documentation for details.
    :maxdepth: 3
    :caption: Contents:
 
-   md
-
+   md/个人博客
+   md/吉他notebook/2.1.手指独立性-爬格子左手
+   md/吉他notebook/2.2.手指基本功-右手
+   md/吉他notebook/2.4.音阶-音-音程
+   md/吉他notebook/2.5.和弦---按法-琶音-功能色彩-走向---
+   md/吉他notebook/GG_CG_1
 
 * :ref:`genindex`
 * :ref:`modindex`
