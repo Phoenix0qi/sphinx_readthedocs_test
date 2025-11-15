@@ -1,4 +1,4 @@
-name: Deploy the docs to RTD
+name: RTD
 
 on:
   push:
