@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:  # 当更改以下文件时，会触发Actions更新文档
       - 'sphinx_readthedocs_test/**'
-      - '.github/workflows/deploy_docs_to_rtd.yml'
+      - '.github/workflows/Readthedocs.yml'
       - 'README.md'
 
 env:
