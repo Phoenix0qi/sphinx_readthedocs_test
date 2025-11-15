@@ -35,6 +35,7 @@ jobs:
           # cp -r your_package docs_build/ || true
           cp -r source docs_build/source || true
           cp README.md docs_build/ || true
+          cp .readthedocs.yaml docs_build/ || true
           cp requirements.txt docs_build/ || true
 
       - name: Setup git config
